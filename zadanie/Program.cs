@@ -8,7 +8,7 @@ int GetArraySize()//создание первого метода
         try//почитал в интернете про try, должно все получится
         {
             Console.Write("Введите количество элементов в массиве:");
-            size = Convert.ToInt32(Console.ReadLine); //Сохраняем в переменную size
+            size = Convert.ToInt32(Console.ReadLine()); //Сохраняем в переменную size
 
             if (size < 1) Console.WriteLine("Введите значение больше единицы:");
         }
@@ -28,7 +28,7 @@ string[] CreateArray()// создание 2 метода
     for (int i = 0; i < size; i++)
     {
         Console.Write($"Введите {i + 1} элемент массива: ");//вводим строку в массив
-        string textarray = Console.ReadLine();//записываем и переписываем переменную
+        string? textarray = Console.ReadLine();//записываем и переписываем переменную(? взял с интернета, вроде как убирает ошибку)
 
         if (textarray == null) newarray[i] = string.Empty; // делаем чтобы на null не ругался терминал
         else newarray[i] = textarray;//присваиваем текст
