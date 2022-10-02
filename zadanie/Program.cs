@@ -27,12 +27,21 @@ string[] CreateArray()// создание 2 метода
     string[] newarray = new string[size];//создаем новый массив
     for (int i = 0; i < size; i++)
     {
-        Console.Write($"Введите {i+1} элемент массива: ");//вводим строку в массив
+        Console.Write($"Введите {i + 1} элемент массива: ");//вводим строку в массив
         string textarray = Console.ReadLine();//записываем и переписываем переменную
-        
-        if(textarray == null) newarray[i] = string.Empty; // делаем чтобы на null не ругался терминал
+
+        if (textarray == null) newarray[i] = string.Empty; // делаем чтобы на null не ругался терминал
         else newarray[i] = textarray;//присваиваем текст
-    
+
     }
     return newarray;//результат
+}
+string[] MainArray(string[] newarray) //создаем 3 отдельный метод типа стринг
+{
+    string[] sec_array = new string[newarray.Length];//создаем массив с такой же длинной
+    for (int i = 0; i < newarray.Length; i++)
+    {
+        if(newarray[i].Length < numofl) sec_array[i] = newarray[i];//записываем при условии
+    }
+    return sec_array;// результат
 }
