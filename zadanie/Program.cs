@@ -45,3 +45,15 @@ string[] MainArray(string[] newarray) //создаем 3 отдельный ме
     }
     return sec_array;// результат
 }
+void ShowArray(string[] newarray) // объявляем метод
+{
+    for(int i = 0; i < newarray.Length; i++)
+    {
+        if (newarray[i] != null) // выводим только в случае если массив не пустой
+        {
+            if(i == newarray.Length - 1) Console.Write($"[{newarray[i]}]"); // последняя строка без запятой:))
+            else Console.Write($"[{newarray[i]}], ");
+        }
+    }
+    Console.WriteLine(); // пустая строка
+}
