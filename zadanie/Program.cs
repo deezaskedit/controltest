@@ -57,3 +57,8 @@ void ShowArray(string[] newarray) // объявляем метод
     }
     Console.WriteLine(); // пустая строка
 }
+string[] array = CreateArray();
+Console.Write($"Первый массив: ");
+ShowArray(array);
+Console.Write($"Второй массив: ");
+ShowArray(MainArray(array));
